@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.student{
+  background-color: rgb(105, 176, 176);
+  margin:120px;
+  max-width: 1200px;
+  padding: 20px;
+}
+ul{
+  text-decoration: none;
+  list-style-type: none;
+  
+}
+li{
+  color: rgb(128, 24, 180);
+  font-size: 44px;
+}

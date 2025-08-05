@@ -1,0 +1,29 @@
+/* StatusCard.module.css */
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 220px;
+  margin: 20px auto;
+  color: white;
+  font-family: sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.online {
+  background-color: green;
+}
+
+.offline {
+  background-color: red;
+}
+
+.button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}

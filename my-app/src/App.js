@@ -11,6 +11,11 @@ import Parent from "./components/Parent";
 import Functi from "./components/Functi";
 import Conditional from "./components/Conditional";
 import List from "./components/List";
+import PeopleList from "./components/PeopleList";
+import Parentlist from './components/Parentlist'
+import Styleshet from './components/Styleshet'
+import StatusCard from './components/StatusCard'
+import Form from "./components/Form";
 
 function App() {
   return (
@@ -24,13 +29,18 @@ function App() {
         <Mcode name="tola" sex="male" age={20}>
           <button>Tolaa koo</button>
         </Mcode>
+
         <Mcode name="beka" sex="male" age={20}>
+          
           <button>Beka koo</button>
         </Mcode>
+
       </div>
 
       <Wada />
+
       <Wadafun />
+
       <Watch />
 
       <h1>Available Products:</h1>
@@ -65,6 +75,11 @@ function App() {
       <Functi></Functi>
       <Conditional></Conditional>
       <List></List>
+      <PeopleList></PeopleList>
+      <Parentlist></Parentlist>
+      <Styleshet myclass={true}></Styleshet>
+      <StatusCard></StatusCard>
+      <Form></Form>
 
     </div>
   );

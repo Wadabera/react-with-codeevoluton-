@@ -1,0 +1,10 @@
+.myclass{
+  color: aqua;
+  background-color: bisque;
+  border: 2px solid rebeccapurple;
+  margin: 130px;
+  padding: 30px;
+}
+.font-xl{
+  font-size: 100px;
+}
