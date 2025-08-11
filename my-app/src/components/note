@@ -1,0 +1,111 @@
+✅ WHAT IS A COMPONENT IN GENERAL?
+In React, a Component is like a reusable block that builds your UI.
+
+Example:
+
+A button is a component.
+
+A user profile is a component.
+
+A chat message is a component.
+
+Now let's talk about the two types:
+
+🔸 Component – Normal Component
+💡 What is it?
+A normal React class component.
+
+👀 What does it do?
+It always re-renders whenever state or props update — even if the value didn’t really change.
+
+✅ When to use it?
+When your component is simple
+
+When performance is not a big deal
+
+When the props or state are changing often
+
+When you want full control over re-rendering
+
+🔹 PureComponent – Smart Component
+💡 What is it?
+A special kind of class component. It automatically checks if props or state really changed.
+
+👀 What does it do?
+If the new value is the same as the old one, it won’t re-render. It helps your app run faster.
+
+✅ When to use it?
+When your component is used many times
+
+When the props don’t change often
+
+When you want to save performance
+
+When working on big apps or tables/lists
+
+🔄 Comparison Table
+Feature	Component	PureComponent
+Re-renders on props	✅ Always	✅ Only if changed
+Performance	🐢 Slower (in big apps)	⚡ Faster (saves time)
+Code simplicity	✅ Easy	✅ Easy but smarter
+Good for	Small UI parts	Repeated or heavy parts
+
+🧠 Real-World Example 1: Chat App (like Telegram)
+Imagine you’re building a chat app.
+
+🧩 Components:
+Chat message (<Message />)
+
+User info (<UserProfile />)
+
+Side menu
+
+✅ Use PureComponent for:
+jsx
+Copy
+Edit
+class Message extends PureComponent {
+  render() {
+    return <p>{this.props.text}</p>;
+  }
+}
+✅ Because chat messages don’t change once sent. So no need to re-render again and again.
+
+🧠 Real-World Example 2: Product List (e.g., Amazon)
+You have many <ProductCard /> components.
+
+✅ Use PureComponent for each product:
+jsx
+Copy
+Edit
+class ProductCard extends PureComponent {
+  render() {
+    return <div>{this.props.name}</div>;
+  }
+}
+✅ Because if a product doesn’t change, there's no need to re-render.
+
+❌ Don’t Use PureComponent When:
+You’re dealing with nested props (deep objects)
+
+Props change every second
+
+You're not worried about performance
+
+📌 REMEMBER
+PureComponent does shallow compare:
+
+It only checks if the first level of props/state changed.
+
+If props are objects, it may not detect inner changes.
+
+✅ Summary in Super Simple Words:
+Word	Meaning
+Component	Normal class component. Renders again even if nothing changed.
+PureComponent	Smart class component. Renders only if something actually changed.
+Use PureComponent when	You want better performance and your props don't change often
+Use Component when	You're doing simple things or props change often
+
+🔚 Final Advice
+👉 In small projects or learning: use Component
+👉 In big projects or repeated UI: prefer PureComponent

@@ -15,7 +15,25 @@ import PeopleList from "./components/PeopleList";
 import Parentlist from './components/Parentlist'
 import Styleshet from './components/Styleshet'
 import StatusCard from './components/StatusCard'
-import Form from "./components/Form";
+import LifecycleA from "./components/LifecycleA";
+import General from "./components/General";
+import Getdata from "./components/Getdata";
+import Postdata from "./components/Postdata";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./page/Home";
+import About from "./page/About";
+import Contact from "./page/Contact";
+import Services from "./page/Services";
+import Blog from "./page/Blog";
+// This is the main App component that renders various components and pages
+// It includes a list of students, product cards, and various other components
+// It also sets up routing for different pages like Home, About, Contact, etc.
+// The App component is the root component of the application and is rendered in index.js
+// It imports various components and styles to create a cohesive user interface
+// The App component is structured to display a list of students, product cards, and various other components
+// It also sets up routing for different pages like Home, About, Contact, etc.
+// The App component is the root component of the application and is rendered in index.js
+// It imports various components and styles to create a cohesive user interface
 
 function App() {
   return (
@@ -79,7 +97,24 @@ function App() {
       <Parentlist></Parentlist>
       <Styleshet myclass={true}></Styleshet>
       <StatusCard></StatusCard>
-      <Form></Form>
+      
+      <LifecycleA></LifecycleA>
+      
+      <General></General>
+      <Getdata></Getdata>
+      <Postdata></Postdata>
+      <Router>
+
+        <div>
+          <Routes>
+            <Route path="/" element={<Home></Home>}></Route>
+            <Route path="/about" element={<About></About>}></Route>
+            <Route path="/contact" element={<Contact></Contact>}></Route>
+            <Route path="/services" element={<Services></Services>}></Route>
+            <Route path="/blog" element={<Blog></Blog>}></Route>
+          </Routes>
+        </div>
+      </Router> 
 
     </div>
   );
