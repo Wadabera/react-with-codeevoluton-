@@ -25,6 +25,7 @@ import About from "./page/About";
 import Contact from "./page/Contact";
 import Services from "./page/Services";
 import Blog from "./page/Blog";
+import UPdate from "./UPdate";
 // This is the main App component that renders various components and pages
 // It includes a list of students, product cards, and various other components
 // It also sets up routing for different pages like Home, About, Contact, etc.
@@ -115,6 +116,7 @@ function App() {
           </Routes>
         </div>
       </Router> 
+      <UPdate></UPdate>
 
     </div>
   );
